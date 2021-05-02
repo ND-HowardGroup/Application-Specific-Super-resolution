@@ -1,0 +1,501 @@
+/afs/crc.nd.edu/user/g/ganantha/.bashrc: line 17: /opt/openfoam5/etc/bashrc: No such file or directory
+ERROR: Unable to locate a modulefile for 'openfoam/5.0'
+Loading pytorch/1.1.0
+  Loading requirement: cuda/10.0 cudnn/7.4
+Tue Mar 23 19:49:00 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Quadro RTX 6000     Off  | 00000000:06:00.0 Off |                    0 |
+| N/A   21C    P8    13W / 250W |      3MiB / 22698MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Quadro RTX 6000     Off  | 00000000:2F:00.0 Off |                    0 |
+| N/A   21C    P8    12W / 250W |      3MiB / 22698MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Quadro RTX 6000     Off  | 00000000:86:00.0 Off |                    0 |
+| N/A   20C    P8    12W / 250W |      3MiB / 22698MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Quadro RTX 6000     Off  | 00000000:D8:00.0 Off |                    0 |
+| N/A   21C    P8    13W / 250W |      3MiB / 22698MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Torch 1.1.0 CUDA 10.0.130
+Device: cpu:0
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 48, 126, 126]             432
+            Conv2d-2           [-1, 64, 63, 63]          27,648
+              ReLU-3           [-1, 64, 63, 63]               0
+       BatchNorm2d-4           [-1, 64, 63, 63]             128
+            Conv2d-5          [-1, 192, 32, 32]         110,592
+              ReLU-6          [-1, 192, 32, 32]               0
+       BatchNorm2d-7          [-1, 192, 32, 32]             384
+   ConvTranspose2d-8          [-1, 128, 63, 63]         221,184
+              ReLU-9          [-1, 128, 63, 63]               0
+      BatchNorm2d-10          [-1, 128, 63, 63]             256
+  ConvTranspose2d-11         [-1, 64, 126, 126]         131,072
+             ReLU-12         [-1, 64, 126, 126]               0
+      BatchNorm2d-13         [-1, 64, 126, 126]             128
+  ConvTranspose2d-14          [-1, 1, 128, 128]             576
+             ReLU-15          [-1, 1, 128, 128]               0
+      BatchNorm2d-16          [-1, 1, 128, 128]               2
+================================================================
+Total params: 492,402
+Trainable params: 492,402
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.06
+Forward/backward pass size (MB): 51.39
+Params size (MB): 1.88
+Estimated Total Size (MB): 53.33
+----------------------------------------------------------------
+generative network: None
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1          [-1, 8, 127, 127]              32
+            Conv2d-2          [-1, 8, 125, 125]             576
+       BatchNorm2d-3          [-1, 8, 125, 125]              16
+            Conv2d-4           [-1, 12, 62, 62]             864
+       BatchNorm2d-5           [-1, 12, 62, 62]              24
+            Conv2d-6           [-1, 16, 30, 30]           1,728
+       BatchNorm2d-7           [-1, 16, 30, 30]              32
+            Conv2d-8           [-1, 20, 14, 14]           2,880
+       BatchNorm2d-9           [-1, 20, 14, 14]              40
+           Conv2d-10             [-1, 24, 6, 6]           4,320
+      BatchNorm2d-11             [-1, 24, 6, 6]              48
+           Linear-12                  [-1, 256]         221,440
+           Linear-13                  [-1, 128]          32,896
+           Linear-14                   [-1, 64]           8,256
+           Linear-15                    [-1, 1]              65
+          Sigmoid-16                    [-1, 1]               0
+================================================================
+Total params: 273,217
+Trainable params: 273,217
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.06
+Forward/backward pass size (MB): 3.89
+Params size (MB): 1.04
+Estimated Total Size (MB): 5.00
+----------------------------------------------------------------
+descriminator network: None
+Start training........................................................
+Epoch 1 training RMSE: 0.741532
+Epoch 1: test RMSE: 0.835348
+Epoch 2 training RMSE: 0.168326
+Epoch 2: test RMSE: 0.117286
+Epoch 3 training RMSE: 0.095360
+Epoch 3: test RMSE: 0.114689
+Epoch 4 training RMSE: 0.094674
+Epoch 4: test RMSE: 0.113529
+Epoch 5 training RMSE: 0.094104
+Epoch 5: test RMSE: 0.112745
+Epoch 6 training RMSE: 0.093425
+Epoch 6: test RMSE: 0.111790
+Epoch 7 training RMSE: 0.092664
+Epoch 7: test RMSE: 0.110863
+Epoch 8 training RMSE: 0.091776
+Epoch 8: test RMSE: 0.109982
+Epoch 9 training RMSE: 0.090653
+Epoch 9: test RMSE: 0.108749
+Epoch 10 training RMSE: 0.089327
+Epoch 10: test RMSE: 0.107520
+Epoch 11 training RMSE: 0.087798
+Epoch 11: test RMSE: 0.106097
+Epoch 12 training RMSE: 0.085957
+Epoch 12: test RMSE: 0.104224
+Epoch 13 training RMSE: 0.083750
+Epoch 13: test RMSE: 0.102087
+Epoch 14 training RMSE: 0.081381
+Epoch 14: test RMSE: 0.099652
+Epoch 15 training RMSE: 0.078969
+Epoch 15: test RMSE: 0.097489
+Epoch 16 training RMSE: 0.076629
+Epoch 16: test RMSE: 0.095373
+Epoch 17 training RMSE: 0.074510
+Epoch 17: test RMSE: 0.093386
+Epoch 18 training RMSE: 0.072659
+Epoch 18: test RMSE: 0.091207
+Epoch 19 training RMSE: 0.070979
+Epoch 19: test RMSE: 0.089540
+Epoch 20 training RMSE: 0.069438
+Epoch 20: test RMSE: 0.087960
+Epoch 21 training RMSE: 0.068027
+Epoch 21: test RMSE: 0.085864
+Epoch 22 training RMSE: 0.066626
+Epoch 22: test RMSE: 0.084559
+Epoch 23 training RMSE: 0.065306
+Epoch 23: test RMSE: 0.082307
+Epoch 24 training RMSE: 0.063898
+Epoch 24: test RMSE: 0.078792
+Epoch 25 training RMSE: 0.062505
+Epoch 25: test RMSE: 0.076375
+Epoch 26 training RMSE: 0.061319
+Epoch 26: test RMSE: 0.074584
+Epoch 27 training RMSE: 0.060079
+Epoch 27: test RMSE: 0.074050
+Epoch 28 training RMSE: 0.059134
+Epoch 28: test RMSE: 0.073667
+Epoch 29 training RMSE: 0.058370
+Epoch 29: test RMSE: 0.072064
+Epoch 30 training RMSE: 0.057531
+Epoch 30: test RMSE: 0.071412
+Epoch 31 training RMSE: 0.056844
+Epoch 31: test RMSE: 0.070705
+Epoch 32 training RMSE: 0.056035
+Epoch 32: test RMSE: 0.070787
+Epoch 33 training RMSE: 0.055510
+Epoch 33: test RMSE: 0.070239
+Epoch 34 training RMSE: 0.054860
+Epoch 34: test RMSE: 0.068864
+Epoch 35 training RMSE: 0.054241
+Epoch 35: test RMSE: 0.069862
+Epoch 36 training RMSE: 0.053900
+Epoch 36: test RMSE: 0.069228
+Epoch 37 training RMSE: 0.053398
+Epoch 37: test RMSE: 0.068094
+Epoch 38 training RMSE: 0.052897
+Epoch 38: test RMSE: 0.068317
+Epoch 39 training RMSE: 0.052417
+Epoch 39: test RMSE: 0.068424
+Epoch 40 training RMSE: 0.052296
+Epoch 40: test RMSE: 0.066742
+Epoch 41 training RMSE: 0.051786
+Epoch 41: test RMSE: 0.066090
+Epoch 42 training RMSE: 0.051527
+Epoch 42: test RMSE: 0.067503
+Epoch 43 training RMSE: 0.051104
+Epoch 43: test RMSE: 0.066371
+Epoch 44 training RMSE: 0.050780
+Epoch 44: test RMSE: 0.065537
+Epoch 45 training RMSE: 0.050539
+Epoch 45: test RMSE: 0.064829
+Epoch 46 training RMSE: 0.050560
+Epoch 46: test RMSE: 0.066457
+Epoch 47 training RMSE: 0.050204
+Epoch 47: test RMSE: 0.065763
+Epoch 48 training RMSE: 0.049942
+Epoch 48: test RMSE: 0.067356
+Epoch 49 training RMSE: 0.049746
+Epoch 49: test RMSE: 0.066691
+Epoch 50 training RMSE: 0.049523
+Epoch 50: test RMSE: 0.065541
+Epoch 51 training RMSE: 0.049566
+Epoch 51: test RMSE: 0.064401
+Epoch 52 training RMSE: 0.049329
+Epoch 52: test RMSE: 0.067457
+Epoch 53 training RMSE: 0.049174
+Epoch 53: test RMSE: 0.064483
+Epoch 54 training RMSE: 0.048923
+Epoch 54: test RMSE: 0.066365
+Epoch 55 training RMSE: 0.048875
+Epoch 55: test RMSE: 0.064302
+Epoch 56 training RMSE: 0.048826
+Epoch 56: test RMSE: 0.065104
+Epoch 57 training RMSE: 0.048545
+Epoch 57: test RMSE: 0.065713
+Epoch 58 training RMSE: 0.048461
+Epoch 58: test RMSE: 0.064493
+Epoch 59 training RMSE: 0.048314
+Epoch 59: test RMSE: 0.064226
+Epoch 60 training RMSE: 0.048316
+Epoch 60: test RMSE: 0.064190
+Epoch 61 training RMSE: 0.048130
+Epoch 61: test RMSE: 0.063268
+Epoch 62 training RMSE: 0.048109
+Epoch 62: test RMSE: 0.063211
+Epoch 63 training RMSE: 0.047999
+Epoch 63: test RMSE: 0.063617
+Epoch 64 training RMSE: 0.047848
+Epoch 64: test RMSE: 0.063593
+Epoch 65 training RMSE: 0.047914
+Epoch 65: test RMSE: 0.064780
+Epoch 66 training RMSE: 0.047686
+Epoch 66: test RMSE: 0.063540
+Epoch 67 training RMSE: 0.047575
+Epoch 67: test RMSE: 0.065886
+Epoch 68 training RMSE: 0.047587
+Epoch 68: test RMSE: 0.063638
+Epoch 69 training RMSE: 0.047545
+Epoch 69: test RMSE: 0.063510
+Epoch 70 training RMSE: 0.047471
+Epoch 70: test RMSE: 0.066538
+Epoch 71 training RMSE: 0.047308
+Epoch 71: test RMSE: 0.064173
+Epoch 72 training RMSE: 0.047479
+Epoch 72: test RMSE: 0.063514
+Epoch 73 training RMSE: 0.047219
+Epoch 73: test RMSE: 0.063159
+Epoch 74 training RMSE: 0.047300
+Epoch 74: test RMSE: 0.063960
+Epoch 75 training RMSE: 0.047259
+Epoch 75: test RMSE: 0.064190
+Epoch 76 training RMSE: 0.047025
+Epoch 76: test RMSE: 0.064444
+Epoch 77 training RMSE: 0.046983
+Epoch 77: test RMSE: 0.063475
+Epoch 78 training RMSE: 0.046999
+Epoch 78: test RMSE: 0.063649
+Epoch 79 training RMSE: 0.046816
+Epoch 79: test RMSE: 0.062889
+Epoch 80 training RMSE: 0.046952
+Epoch 80: test RMSE: 0.063105
+Epoch 81 training RMSE: 0.046845
+Epoch 81: test RMSE: 0.062822
+Epoch 82 training RMSE: 0.046870
+Epoch 82: test RMSE: 0.065640
+Epoch 83 training RMSE: 0.046693
+Epoch 83: test RMSE: 0.062864
+Epoch 84 training RMSE: 0.046706
+Epoch 84: test RMSE: 0.062908
+Epoch 85 training RMSE: 0.046691
+Epoch 85: test RMSE: 0.063618
+Epoch 86 training RMSE: 0.046650
+Epoch 86: test RMSE: 0.063800
+Epoch 87 training RMSE: 0.046451
+Epoch 87: test RMSE: 0.063493
+Epoch 88 training RMSE: 0.046507
+Epoch 88: test RMSE: 0.062936
+Epoch 89 training RMSE: 0.046618
+Epoch 89: test RMSE: 0.062539
+Epoch 90 training RMSE: 0.046359
+Epoch 90: test RMSE: 0.064243
+Epoch 91 training RMSE: 0.046229
+Epoch 91: test RMSE: 0.062533
+Epoch 92 training RMSE: 0.046247
+Epoch 92: test RMSE: 0.063802
+Epoch 93 training RMSE: 0.046241
+Epoch 93: test RMSE: 0.063312
+Epoch 94 training RMSE: 0.046100
+Epoch 94: test RMSE: 0.062979
+Epoch 95 training RMSE: 0.046102
+Epoch 95: test RMSE: 0.063026
+Epoch 96 training RMSE: 0.046351
+Epoch 96: test RMSE: 0.062528
+Epoch 97 training RMSE: 0.046092
+Epoch 97: test RMSE: 0.062306
+Epoch 98 training RMSE: 0.046063
+Epoch 98: test RMSE: 0.062123
+Epoch 99 training RMSE: 0.045886
+Epoch 99: test RMSE: 0.064404
+Epoch 100 training RMSE: 0.045973
+Epoch 100: test RMSE: 0.063438
+Epoch 101 training RMSE: 0.046030
+Epoch 101: test RMSE: 0.063151
+Epoch 102 training RMSE: 0.045899
+Epoch 102: test RMSE: 0.063741
+Epoch 103 training RMSE: 0.045874
+Epoch 103: test RMSE: 0.062098
+Epoch 104 training RMSE: 0.045934
+Epoch 104: test RMSE: 0.067139
+Epoch 105 training RMSE: 0.045950
+Epoch 105: test RMSE: 0.062780
+Epoch 106 training RMSE: 0.045726
+Epoch 106: test RMSE: 0.062324
+Epoch 107 training RMSE: 0.045765
+Epoch 107: test RMSE: 0.063040
+Epoch 108 training RMSE: 0.045731
+Epoch 108: test RMSE: 0.062854
+Epoch 109 training RMSE: 0.045790
+Epoch 109: test RMSE: 0.064214
+Epoch 110 training RMSE: 0.045805
+Epoch 110: test RMSE: 0.062504
+Epoch 111 training RMSE: 0.045636
+Epoch 111: test RMSE: 0.062914
+Epoch 112 training RMSE: 0.045679
+Epoch 112: test RMSE: 0.062235
+Epoch 113 training RMSE: 0.045545
+Epoch 113: test RMSE: 0.062103
+Epoch 114 training RMSE: 0.045453
+Epoch 114: test RMSE: 0.062198
+Epoch 115 training RMSE: 0.045475
+Epoch 115: test RMSE: 0.062199
+Epoch 116 training RMSE: 0.045451
+Epoch 116: test RMSE: 0.065057
+Epoch 117 training RMSE: 0.045596
+Epoch 117: test RMSE: 0.062473
+Epoch 118 training RMSE: 0.045590
+Epoch 118: test RMSE: 0.062286
+Epoch 119 training RMSE: 0.045504
+Epoch 119: test RMSE: 0.062303
+Epoch 120 training RMSE: 0.045358
+Epoch 120: test RMSE: 0.064093
+Epoch 121 training RMSE: 0.045337
+Epoch 121: test RMSE: 0.062233
+Epoch 122 training RMSE: 0.045320
+Epoch 122: test RMSE: 0.062651
+Epoch 123 training RMSE: 0.045249
+Epoch 123: test RMSE: 0.062737
+Epoch 124 training RMSE: 0.045275
+Epoch 124: test RMSE: 0.065563
+Epoch 125 training RMSE: 0.045363
+Epoch 125: test RMSE: 0.062122
+Epoch 126 training RMSE: 0.045254
+Epoch 126: test RMSE: 0.063233
+Epoch 127 training RMSE: 0.045096
+Epoch 127: test RMSE: 0.062223
+Epoch 128 training RMSE: 0.045157
+Epoch 128: test RMSE: 0.062167
+Epoch 129 training RMSE: 0.045275
+Epoch 129: test RMSE: 0.063334
+Epoch 130 training RMSE: 0.045182
+Epoch 130: test RMSE: 0.063460
+Epoch 131 training RMSE: 0.045168
+Epoch 131: test RMSE: 0.061882
+Epoch 132 training RMSE: 0.045063
+Epoch 132: test RMSE: 0.064565
+Epoch 133 training RMSE: 0.044992
+Epoch 133: test RMSE: 0.062227
+Epoch 134 training RMSE: 0.045112
+Epoch 134: test RMSE: 0.062765
+Epoch 135 training RMSE: 0.045168
+Epoch 135: test RMSE: 0.064960
+Epoch 136 training RMSE: 0.044969
+Epoch 136: test RMSE: 0.062733
+Epoch 137 training RMSE: 0.044960
+Epoch 137: test RMSE: 0.062897
+Epoch 138 training RMSE: 0.044938
+Epoch 138: test RMSE: 0.062360
+Epoch 139 training RMSE: 0.044975
+Epoch 139: test RMSE: 0.062486
+Epoch 140 training RMSE: 0.044908
+Epoch 140: test RMSE: 0.062375
+Epoch 141 training RMSE: 0.045026
+Epoch 141: test RMSE: 0.062024
+Epoch 142 training RMSE: 0.044898
+Epoch 142: test RMSE: 0.062224
+Epoch 143 training RMSE: 0.044953
+Epoch 143: test RMSE: 0.062666
+Epoch 144 training RMSE: 0.044847
+Epoch 144: test RMSE: 0.062557
+Epoch 145 training RMSE: 0.044849
+Epoch 145: test RMSE: 0.062990
+Epoch 146 training RMSE: 0.044863
+Epoch 146: test RMSE: 0.062255
+Epoch 147 training RMSE: 0.044848
+Epoch 147: test RMSE: 0.063244
+Epoch 148 training RMSE: 0.044835
+Epoch 148: test RMSE: 0.063271
+Epoch 149 training RMSE: 0.044911
+Epoch 149: test RMSE: 0.062581
+Epoch 150 training RMSE: 0.044680
+Epoch 150: test RMSE: 0.061753
+Epoch 151 training RMSE: 0.044780
+Epoch 151: test RMSE: 0.062212
+Epoch 152 training RMSE: 0.044758
+Epoch 152: test RMSE: 0.063317
+Epoch 153 training RMSE: 0.044707
+Epoch 153: test RMSE: 0.063284
+Epoch 154 training RMSE: 0.044958
+Epoch 154: test RMSE: 0.064273
+Epoch 155 training RMSE: 0.044858
+Epoch 155: test RMSE: 0.063478
+Epoch 156 training RMSE: 0.044696
+Epoch 156: test RMSE: 0.063705
+Epoch 157 training RMSE: 0.044630
+Epoch 157: test RMSE: 0.063098
+Epoch 158 training RMSE: 0.044656
+Epoch 158: test RMSE: 0.063274
+Epoch 159 training RMSE: 0.044572
+Epoch 159: test RMSE: 0.062651
+Epoch 160 training RMSE: 0.044651
+Epoch 160: test RMSE: 0.062665
+Epoch 161 training RMSE: 0.044791
+Epoch 161: test RMSE: 0.063691
+Epoch 162 training RMSE: 0.044770
+Epoch 162: test RMSE: 0.062118
+Epoch 163 training RMSE: 0.044576
+Epoch 163: test RMSE: 0.063291
+Epoch 164 training RMSE: 0.044600
+Epoch 164: test RMSE: 0.062272
+Epoch 165 training RMSE: 0.044582
+Epoch 165: test RMSE: 0.062629
+Epoch 166 training RMSE: 0.044413
+Epoch 166: test RMSE: 0.061922
+Epoch 167 training RMSE: 0.044692
+Epoch 167: test RMSE: 0.063080
+Epoch 168 training RMSE: 0.044408
+Epoch 168: test RMSE: 0.064207
+Epoch 169 training RMSE: 0.044559
+Epoch 169: test RMSE: 0.064500
+Epoch 170 training RMSE: 0.044385
+Epoch 170: test RMSE: 0.062848
+Epoch 171 training RMSE: 0.044359
+Epoch 171: test RMSE: 0.062448
+Epoch 172 training RMSE: 0.044426
+Epoch 172: test RMSE: 0.062104
+Epoch 173 training RMSE: 0.044338
+Epoch 173: test RMSE: 0.064132
+Epoch 174 training RMSE: 0.044312
+Epoch 174: test RMSE: 0.063507
+Epoch 175 training RMSE: 0.044223
+Epoch 175: test RMSE: 0.062653
+Epoch 176 training RMSE: 0.044467
+Epoch 176: test RMSE: 0.063735
+Epoch 177 training RMSE: 0.044342
+Epoch 177: test RMSE: 0.062439
+Epoch 178 training RMSE: 0.044438
+Epoch 178: test RMSE: 0.062385
+Epoch 179 training RMSE: 0.044437
+Epoch 179: test RMSE: 0.064899
+Epoch 180 training RMSE: 0.044296
+Epoch 180: test RMSE: 0.062850
+Epoch 181 training RMSE: 0.044338
+Epoch 181: test RMSE: 0.062478
+Epoch 182 training RMSE: 0.044219
+Epoch 182: test RMSE: 0.061679
+Epoch 183 training RMSE: 0.044238
+Epoch 183: test RMSE: 0.063820
+Epoch 184 training RMSE: 0.044192
+Epoch 184: test RMSE: 0.063183
+Epoch 185 training RMSE: 0.044162
+Epoch 185: test RMSE: 0.063749
+Epoch 186 training RMSE: 0.044069
+Epoch 186: test RMSE: 0.063924
+Epoch 187 training RMSE: 0.044225
+Epoch 187: test RMSE: 0.064597
+Epoch 188 training RMSE: 0.044027
+Epoch 188: test RMSE: 0.062361
+Epoch 189 training RMSE: 0.044135
+Epoch 189: test RMSE: 0.062455
+Epoch 190 training RMSE: 0.044100
+Epoch 190: test RMSE: 0.061454
+Epoch 191 training RMSE: 0.044049
+Epoch 191: test RMSE: 0.063099
+Epoch 192 training RMSE: 0.044077
+Epoch 192: test RMSE: 0.063298
+Epoch 193 training RMSE: 0.044098
+Epoch 193: test RMSE: 0.062876
+Epoch 194 training RMSE: 0.044006
+Epoch 194: test RMSE: 0.063470
+Epoch 195 training RMSE: 0.044069
+Epoch 195: test RMSE: 0.063245
+Epoch 196 training RMSE: 0.044074
+Epoch 196: test RMSE: 0.062908
+Epoch 197 training RMSE: 0.043973
+Epoch 197: test RMSE: 0.064409
+Epoch 198 training RMSE: 0.044007
+Epoch 198: test RMSE: 0.063543
+Epoch 199 training RMSE: 0.043920
+Epoch 199: test RMSE: 0.062562
+Epoch 200 training RMSE: 0.043911
+Epoch 200: test RMSE: 0.062248
+Execution time >>>>>>>: 2169.656560897827
+/afs/crc.nd.edu/user/g/ganantha/.bashrc: line 17: /opt/openfoam5/etc/bashrc: No such file or directory
