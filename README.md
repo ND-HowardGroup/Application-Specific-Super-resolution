@@ -43,8 +43,9 @@ Diffraction-limited Image          | SRDenseED result         | Target super-res
 2. Appendix using different hyper-paramaeters (includes different losses, activation, learning rate, combination of losses, training dataset size..etc)
 ![](Results/Abalation_study/FCNs_diff_hyper_params.png)
 3. Performance of GANs using DenseED blocks on the BPAE sample dataset
-![](Results/Abalation_study/GANs_diff_hyper_params.png)
-
+![](Results/Abalation_study/GANs_diff_hyper_params.jpg)
+4. Total chart of the Abalation study
+![](Appendix_A_SR_Paper.pdf)
 
 # Gneralization of trained model (trained on BPAE dataset with SRdenseED model (3,6,3)): 
 Sample: Mouse Kidney, captured using custom-built two-photon microscopy
