@@ -40,6 +40,9 @@ Generative adviseral networks (GANs) with DenseED blocks:
 
 
 # Gneralization of trained model (trained on BPAE dataset): 
+Input diffraction-limited Image          | SRDenseED result         | Target super-resolution Image 		         |	
+:-------------------------:|:-------------------------:|:-------------------------:|
+<img src="Results/Transfer_learning_Mouse_kidney/DL_image_MK_orange.png" width="200" height="200" />   |  <img src="Results/Transfer_learning_Mouse_kidney/Est_SR_image_MK_orange.png" width="200" height="200" />| <img src="Results/Transfer_learning_Mouse_kidney/target_SR_image_MK_orange.png" width="200" height="200" /> |
 Mouse Kideny input: diffraction-limited image (FOV1)
 
 ![](Results/Transfer_learning_Mouse_kidney/DL_image_MK_orange.png)
