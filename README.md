@@ -39,7 +39,7 @@ Generative adviseral networks (GANs) with DenseED blocks:
 ![](Results/Main_figure/main_images/GANs_denseED_Est_SR_image.png)
 
 
-Transfer learning: 
+# Gneralization of trained model (trained on BPAE dataset): 
 Mouse Kideny input: diffraction-limited image (FOV1)
 
 ![](Results/Transfer_learning_Mouse_kidney/DL_image_MK_orange.png)
