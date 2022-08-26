@@ -40,22 +40,12 @@ Generative adviseral networks (GANs) with DenseED blocks:
 
 
 # Gneralization of trained model (trained on BPAE dataset): 
-Input diffraction-limited Image          | SRDenseED result         | Target super-resolution Image 		         |	
+Sample: Mouse Kidney, captured using two-photon microscopy
+
+Diffraction-limited Image          | SRDenseED result         | Target super-resolution Image 		         |	
 :-------------------------:|:-------------------------:|:-------------------------:|
 <img src="Results/Transfer_learning_Mouse_kidney/DL_image_MK_orange.png" width="200" height="200" />   |  <img src="Results/Transfer_learning_Mouse_kidney/Est_SR_image_MK_orange.png" width="200" height="200" />| <img src="Results/Transfer_learning_Mouse_kidney/target_SR_image_MK_orange.png" width="200" height="200" /> |
-Mouse Kideny input: diffraction-limited image (FOV1)
 
-![](Results/Transfer_learning_Mouse_kidney/DL_image_MK_orange.png)
-
-
-Estiamted super-resolution image using FCN with DenseED blocks:
-
-![](Results/Transfer_learning_Mouse_kidney/Est_SR_image_MK_orange.png)
-
-
-Target super-resolution image (generated using SRRF method): 
-
-![](Results/Transfer_learning_Mouse_kidney/target_SR_image_MK_orange.png)
 
 
 
