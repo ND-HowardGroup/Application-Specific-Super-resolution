@@ -1,7 +1,12 @@
 # Super-resolution CNN based on DenseED blocks
 This repository includes the code used for the geenration of super-resolution of microscopy images training using the small data (a small training dataset and really useful for biomedical applications like X-ray, MRI and in vivo imaging). 
 
-Datasets: 
+# Motivation: 
+Figure shows the tradeoff between dataset size and performance: 
+
+
+
+# Datasets: 
 1. W2S dataset (open-source dataset)
 2. BPAE dataset (custom-built two-photon microscopy)
 
