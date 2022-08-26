@@ -9,40 +9,19 @@ Datasets:
 Widefield2SIM dataset (comination of experimental diffraction-limited images and SIM images as target images of human cells)
 
 # BPAE dataset
-Diffraction-limited image: (BPAE sample from test dataset: FOV8)
+(BPAE sample from test dataset: FOV8)
+Sample: BPAE, captured using custom-built two-photon microscopy
 
-![](Results/Main_figure/main_images/DL_image.png)
+Diffraction-limited Image          | SRDenseED result         | Target super-resolution Image (using SRRF method)		         |	
+:-------------------------:|:-------------------------:|:-------------------------:|
+<img src="Results/Main_figure/main_images/DL_image.png" width="200" height="200" />   |  <img src="Results/Main_figure/main_images/FCN_denseED_Est_SR_image.png" width="200" height="200" />| <img src="Results/Main_figure/main_images/target_SR_image.png" width="200" height="200" /> |
 
-
-Target super-resolution image geenrated with SRRF method: 
-
-![](Results/Main_figure/main_images/target_SR_image.png)
-
-
-Fully convolutional networks (FCNs) without DenseED blocks:
-
-![](Results/Main_figure/main_images/FCN_no_denseED_Est_SR_image1.png)
-
-
-Fully convolutional networks (FCNs) with DenseED blocks:
-
-![](Results/Main_figure/main_images/FCN_denseED_Est_SR_image.png)
-
-
-Generative adviseral networks (GANs) without DenseED blocks:
-
-![](Results/Main_figure/main_images/simple_GANs_Est_SR_image_config9433.png)
-
-
-Generative adviseral networks (GANs) with DenseED blocks:
-
-![](Results/Main_figure/main_images/GANs_denseED_Est_SR_image.png)
 
 
 # Gneralization of trained model (trained on BPAE dataset): 
-Sample: Mouse Kidney, captured using two-photon microscopy
+Sample: Mouse Kidney, captured using custom-built two-photon microscopy
 
-Diffraction-limited Image          | SRDenseED result         | Target super-resolution Image 		         |	
+Diffraction-limited Image          | SRDenseED result         | Target super-resolution Image (using SRRF method)		         |	
 :-------------------------:|:-------------------------:|:-------------------------:|
 <img src="Results/Transfer_learning_Mouse_kidney/DL_image_MK_orange.png" width="200" height="200" />   |  <img src="Results/Transfer_learning_Mouse_kidney/Est_SR_image_MK_orange.png" width="200" height="200" />| <img src="Results/Transfer_learning_Mouse_kidney/target_SR_image_MK_orange.png" width="200" height="200" /> |
 
