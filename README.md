@@ -1,4 +1,4 @@
-# Super-resolution CNN based on DenseED blocks
+# Application-Specific Super-resolution CNN based on DenseED blocks
 This repository includes the code used for the geenration of super-resolution of microscopy images training using the small data (a small training dataset and really useful for biomedical applications like X-ray, MRI and in vivo imaging). 
 
 # Motivation: 
@@ -37,8 +37,16 @@ Diffraction-limited Image          | SRDenseED result         | Target super-res
 <img src="Results/Main_figure/main_images/DL_image.png" width="200" height="200" />   |  <img src="Results/Main_figure/main_images/FCN_denseED_Est_SR_image.png" width="200" height="200" />| <img src="Results/Main_figure/main_images/target_SR_image.png" width="200" height="200" /> |
 
 
+# Abalation study of the trained ML model
+1. MSE loss of different denseED configurations (varied number of layers in each denseED block by keeping same number of dense blocks for the whole experiment)
+![](Results/Abalation_study/diff_models.jpg)
+2. Appendix using different hyper-paramaeters (includes different losses, activation, learning rate, combination of losses, training dataset size..etc)
+![](Results/Abalation_study/FCNs_diff_hyper_params.png)
+3. Performance of GANs using DenseED blocks on the BPAE sample dataset
+![](Results/Abalation_study/GANs_diff_hyper_params.png)
 
-# Gneralization of trained model (trained on BPAE dataset): 
+
+# Gneralization of trained model (trained on BPAE dataset with SRdenseED model (3,6,3)): 
 Sample: Mouse Kidney, captured using custom-built two-photon microscopy
 
 Diffraction-limited Image          | SRDenseED result         | Target super-resolution Image (using SRRF method)		         |	
