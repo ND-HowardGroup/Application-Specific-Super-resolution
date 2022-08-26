@@ -3,7 +3,12 @@ This repository includes the code used for the geenration of super-resolution of
 
 # Motivation: 
 Figure shows the tradeoff between dataset size and performance: 
-
+1. Show the requirement of the SR datasets
+![](Results/motivation_files/big_motivation1.jpg)
+2. Show the illustration of the ML model (tradeoff between training dataset size and performance metrics)
+![](Results/motivation_files/Motivation1.jpg)
+3.Tradeoff of ML methods performance metrics vs training dataset size
+![](Results/motivation_files/motivation2.jpg)
 
 
 # Datasets: 
