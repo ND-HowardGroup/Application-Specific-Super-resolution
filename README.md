@@ -15,6 +15,12 @@ Figure shows the tradeoff between dataset size and performance:
 1. W2S dataset (open-source dataset)
 2. BPAE dataset (custom-built two-photon microscopy)
 
+# Sample dataset images: 
+1. W2S dataset samples (experimentally captured diffraction-limited (using widefield microscopy setup) and super-resolution images (SIM microscope setup))
+![](Results/dataset_sample_images/training_dataset.jpg)
+2. BPAE dataset samples (experimentally captured diffraction-limited (using two-photon microscopy setup) and super-resolution images (computationally generated using SRRF method))
+![](Results/dataset_sample_images/training_dataset2.jpg)
+
 # W2S dataset
 Widefield2SIM dataset (comination of experimental diffraction-limited images and SIM images as target images of human cells)
 
