@@ -39,11 +39,11 @@ Diffraction-limited Image          | SRDenseED result         | Target super-res
 
 # Ablation study of the trained ML model
 1. MSE loss of different denseED configurations (varied number of layers in each denseED block by keeping same number of dense blocks for the whole experiment)
-![](Results/Ablation_study/diff_models.jpg)
+![](Results/Ablation_files/diff_models.jpg)
 2. Appendix using different hyper-paramaeters (includes different losses, activation, learning rate, combination of losses, training dataset size..etc)
-![](Results/Ablation_study/FCNs_diff_hyper_params.png)
+![](Results/Ablation_files/FCNs_diff_hyper_params.png)
 3. Performance of GANs using DenseED blocks on the BPAE sample dataset
-![](Results/Ablation_study/GANs_diff_hyper_params.jpg)
+![](Results/Ablation_files/GANs_diff_hyper_params.jpg)
 
 
 # Gneralization of trained model (trained on BPAE dataset with SRdenseED model (3,6,3)): 
