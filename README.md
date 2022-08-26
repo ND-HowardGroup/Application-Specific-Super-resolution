@@ -23,6 +23,10 @@ Figure shows the tradeoff between dataset size and performance:
 
 # W2S dataset
 Widefield2SIM dataset (comination of experimental diffraction-limited images and SIM images as target images of human cells)
+Diffraction-limited Image          | SRDenseED result         | Target super-resolution Image (using SRRF method)		         |	
+:-------------------------:|:-------------------------:|:-------------------------:|
+<img src="Results/Main_figure/main_images/DL_image.png" width="200" height="200" />   |  <img src="Results/Main_figure/main_images/FCN_denseED_Est_SR_image.png" width="200" height="200" />| <img src="Results/Main_figure/main_images/target_SR_image.png" width="200" height="200" /> |
+
 
 # BPAE dataset
 (BPAE sample from test dataset: FOV8)
