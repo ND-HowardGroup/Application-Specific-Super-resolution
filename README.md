@@ -1,4 +1,4 @@
-# Application-Specific Super-resolution CNN based on DenseED blocks
+# Application-Specific Super-resolution using DenseEncoder-Decoder (DenseED) blocks
 This repository includes the code used for the geenration of super-resolution of microscopy images training using the small data (a small training dataset and really useful for biomedical applications like X-ray, MRI and in vivo imaging). 
 
 # Motivation: 
