@@ -53,12 +53,14 @@ Resiolution improvemnt using SRdenseED method (by a factor of 2x)
 ![](Results/Ablation_files/FCNs_diff_hyper_params.png)
 3. Performance of GANs using DenseED blocks on the BPAE sample dataset
 ![](Results/Ablation_files/GANs_diff_hyper_params.jpg)
-
-
-# Gneralization of trained model (trained on BPAE dataset with SRdenseED model (3,6,3)): 
+4. GANs illustration
+![](Results/Ablation_files/GANs_illustration.jpg)
+5. GANS result on the BPAE dataset
+![](Results/Ablation_files/GANs results.jpg)
+6. Gneralization of trained model (trained on BPAE dataset with SRdenseED model (3,6,3)): 
 Sample: Mouse Kidney, captured using custom-built two-photon microscopy
 
-Diffraction-limited Image          | SRDenseED result         | Target super-resolution Image (using SRRF method)		         |	
+Diffraction-limited Image  | SRDenseED result         | Target SR Image (using SRRF method) |	
 :-------------------------:|:-------------------------:|:-------------------------:|
 <img src="Results/Transfer_learning_Mouse_kidney/DL_image_MK_orange.png" width="200" height="200" />   |  <img src="Results/Transfer_learning_Mouse_kidney/Est_SR_image_MK_orange.png" width="200" height="200" />| <img src="Results/Transfer_learning_Mouse_kidney/target_SR_image_MK_orange.png" width="200" height="200" /> |
 
