@@ -21,7 +21,7 @@ Figure shows the tradeoff between dataset size and performance:
 2. BPAE dataset samples (experimentally captured diffraction-limited (using two-photon microscopy setup) and super-resolution images (computationally generated using SRRF method))
 ![](Results/dataset_sample_images/training_dataset2.jpg)
 
-## Results
+# Results
 # W2S dataset
 Widefield2SIM dataset (comination of experimental diffraction-limited images and SIM images as target images of human cells)
 Part (a):
@@ -46,7 +46,7 @@ Resiolution improvemnt using SRdenseED method (by a factor of 2x)
 ![](Results/main_results/Fig9_main.jpg)
 
 
-# Ablation study of the trained ML model
+# Ablation study of the trained ML model (using BPAE dataset only)
 1. MSE loss of different denseED configurations (varied number of layers in each denseED block by keeping same number of dense blocks for the whole experiment)
 ![](Results/Ablation_files/diff_models.jpg)
 2. Appendix using different hyper-paramaeters (includes different losses, activation, learning rate, combination of losses, training dataset size..etc)
@@ -56,7 +56,7 @@ Resiolution improvemnt using SRdenseED method (by a factor of 2x)
 4. GANs illustration
 ![](Results/Ablation_files/GANs_illustration.jpg)
 5. GANS result on the BPAE dataset
-![](Results/Ablation_files/GANs results.jpg)
+![](Results/Ablation_files/GANs_results.jpg)
 6. Gneralization of trained model (trained on BPAE dataset with SRdenseED model (3,6,3)): 
 Sample: Mouse Kidney, captured using custom-built two-photon microscopy
 
