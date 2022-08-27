@@ -21,20 +21,29 @@ Figure shows the tradeoff between dataset size and performance:
 2. BPAE dataset samples (experimentally captured diffraction-limited (using two-photon microscopy setup) and super-resolution images (computationally generated using SRRF method))
 ![](Results/dataset_sample_images/training_dataset2.jpg)
 
+## Results
 # W2S dataset
 Widefield2SIM dataset (comination of experimental diffraction-limited images and SIM images as target images of human cells)
-Diffraction-limited Image          | SRDenseED result         | Target super-resolution Image (using SRRF method)		         |	
-:-------------------------:|:-------------------------:|:-------------------------:|
-<img src="Results/Main_figure/main_images/DL_image.png" width="200" height="200" />   |  <img src="Results/Main_figure/main_images/FCN_denseED_Est_SR_image.png" width="200" height="200" />| <img src="Results/Main_figure/main_images/target_SR_image.png" width="200" height="200" /> |
+Part (a):
+1. Effect of DenseED blocks on noise-free W2S dataset when comapred to simple FCNs
+![](Results/main_results/Fig3_main.jpg)
+2. Illustration of training size vs accuracy in DenseED method on noise-free W2S dataset
+![](Results/main_results/Fig4_main.jpg)
+3. Qualitative results of noise-free W2S sample when ML model trained with only 15 FOVs
+![](Results/main_results/Fig5_main.jpg)
 
+Part (b):
+4. Effect of DenseED blocks on noisy W2S dataset when comapred to simple FCNs
+![](Results/main_results/Fig6_main.jpg)
+5. Illustration of training size vs accuracy in DenseED method on noisy W2S dataset
+![](Results/main_results/Fig7_main.jpg)
+6. Qualitative results of noisy W2S sample when ML model trained with only 15 FOVs
+![](Results/main_results/Fig8_main.jpg)
 
 # BPAE dataset
-(BPAE sample from test dataset: FOV8)
-Sample: BPAE, captured using custom-built two-photon microscopy
-
-Diffraction-limited Image          | SRDenseED result         | Target super-resolution Image (using SRRF method)		         |	
-:-------------------------:|:-------------------------:|:-------------------------:|
-<img src="Results/Main_figure/main_images/DL_image.png" width="200" height="200" />   |  <img src="Results/Main_figure/main_images/FCN_denseED_Est_SR_image.png" width="200" height="200" />| <img src="Results/Main_figure/main_images/target_SR_image.png" width="200" height="200" /> |
+Sample: BPAE, captured using custom-built two-photon microscopy (BPAE sample from test dataset: FOV8)
+Resiolution improvemnt using SRdenseED method (by a factor of 2x)
+![](Results/main_results/Fig9_main.jpg)
 
 
 # Ablation study of the trained ML model
