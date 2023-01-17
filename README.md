@@ -30,7 +30,7 @@ Part (a):
 2. Illustration of training size vs accuracy in DenseED method on noise-free W2S dataset
 ![](Results/main_results/Fig4_main.jpg)
 3. Qualitative results of noise-free W2S sample when ML model trained with only 15 FOVs
-![](Results/main_results/Fig5_main.jpg)
+![](Results/main_results/Fig5_main.png)
 
 Part (b):
 4. Effect of DenseED blocks on noisy W2S dataset when comapred to simple FCNs
@@ -38,7 +38,7 @@ Part (b):
 5. Illustration of training size vs accuracy in DenseED method on noisy W2S dataset
 ![](Results/main_results/Fig7_main.jpg)
 6. Qualitative results of noisy W2S sample when ML model trained with only 15 FOVs
-![](Results/main_results/Fig8_main.jpg)
+![](Results/main_results/Fig8_main.png)
 
 # BPAE dataset
 Sample: BPAE, captured using custom-built two-photon microscopy (BPAE sample from test dataset: FOV8)
